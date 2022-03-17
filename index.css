@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.--red {
+    color: red;
+}
+
+.title {
+    text-align: center;
+    font-size: 3.5rem;
+
+    margin-bottom: 25px;
+}
+
+.description {
+    font-size: 1.5rem;
+
+    margin-bottom: 15px;
+}
+
+.steps__title {
+    font-weight: 700;
+}
+
+.form>* {
+    margin-top: 10px;
+}
+
+.form__group {
+    padding: 15px 35px;
+
+    box-shadow: 0 2px 4px 0 #9b9b9b;
+
+    transition: background .2s ease;
+}
+
+.form__group.completed {
+    background-color: #0ec32166;
+}
+
+.form__group input {
+    display: none;
+}
+
+.form__group input:checked+label::after {
+    opacity: 1;
+}
+
+.form__label {
+    cursor: pointer;
+
+    position: relative;
+}
+
+.form__label:before {
+    content: '';
+    display: block;
+
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.form__label:after {
+    content: '\00D7';
+    display: block;
+
+    opacity: 0;
+    font-size: 1.5rem;
+    line-height: 15px;
+    text-align: center;
+
+    padding-bottom: 1px;
+
+    position: absolute;
+    top: 50%;
+    left: -21.5px;
+    z-index: 2;
+    transform: translateY(-50%);
+
+    transition: opacity .2s ease;
+}
+
+a {
+    font-size: 1.1em;
+    display: inline-block;
+    color: blue;
+    font-weight: 700;
+}
+
+a:hover {
+    animation: color 2s infinite;
+}
+
+.form__info {
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px 0 #9b9b9b;
+    background-color: rgba(245, 170, 67, 33%);
+}
+
+.form__info i {
+    margin-right: 10px;
+    font-size: 1.6em;
+    color: #ff5200;
+}
+
+.form__info a {
+    margin-left: 5px;
+}
+
+.goodluck {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-top: 10px;
+    text-align: center;
+    animation: color 3s infinite;
+}
+
+@keyframes color {
+    0% {
+        color: red;
+    }
+
+    33% {
+        color: green;
+    }
+
+    66% {
+        color: blue;
+    }
+
+    100% {
+        color: red;
+    }
+}
